@@ -1,6 +1,6 @@
 <ul class="list-group pull-left">
   <li class="list-group-item" ng-repeat="item in foundItemsCtrl.items">
-    {{ item.name }}, {{ item.short_name }}, {{item.description}}
-    <button ng-click="foundItemsCtrl.onRemove({index: $index});">Remove Item</button>
+    <span>{{ item.name }}</span>, <span>{{ item.short_name }}</span>, <span class="text-primary">{{item.description}}</span>
+    <button ng-click="foundItemsCtrl.onRemove({index: $index});">Don't want this one!</button>
   </li>
 </ul>
