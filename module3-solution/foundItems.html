@@ -1,6 +1,8 @@
-<ul class="list-group pull-left">
+<ul class="row pull-left list-group">
   <li class="list-group-item" ng-repeat="item in foundItemsCtrl.items">
     <span>{{ item.name }}</span>, <span>{{ item.short_name }}</span>, <span class="text-primary">{{item.description}}</span>
     <button ng-click="foundItemsCtrl.onRemove({index: $index});">Don't want this one!</button>
   </li>
 </ul>
+<!--Nothing found-->
+<div class="text-info" ng-transclude></div>

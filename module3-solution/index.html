@@ -8,17 +8,23 @@
   </head>
 <body ng-app="NarrowItDownApp">
    <div class="container" ng-controller="NarrowItDownController as narrowDownCtrl">
-    <h1>Narrow Down Your Chinese Menu Choice</h1>
+     <div class="row">
+       <h1>Narrow Down Your Chinese Menu Choice</h1>
 
-    <div class="form-group">
-      <input type="text" placeholder="search term" class="form-control" ng-model="narrowDownCtrl.searchTerm">
-    </div>
-    <div class="form-group narrow-button">
-      <button class="btn btn-primary" ng-click="narrowDownCtrl.findItems()">Narrow It Down For Me!</button>
+       <div class="form-group">
+         <input type="text" placeholder="search term" class="form-control" ng-model="narrowDownCtrl.searchTerm">
+       </div>
+       <div class="form-group narrow-button">
+         <button class="btn btn-primary" ng-click="narrowDownCtrl.findItems()">Narrow It Down For Me!</button>
+       </div>
     </div>
 
     <!-- found-items should be implemented as a component -->
-    <found-items items="narrowDownCtrl.found" on-remove="narrowDownCtrl.removeItem(index)"></found-items>
+    <found-items items="narrowDownCtrl.found"
+                 on-remove="narrowDownCtrl.removeItem(index)"
+                 on-init="narrowDownCtrl.initialized">
+      <span>{{narrowDownCtrl.infoMessage}}<span>
+    </found-items>
   </div>
   <script src="angular.min.js"></script>
   <script src="app.js"></script>

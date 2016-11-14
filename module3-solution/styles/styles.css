@@ -50,3 +50,6 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+.text-info {
+  display: none;
+}
