@@ -19,7 +19,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/templates/home.template.html'
   })
 
-  // Premade list page
+  // Categories list page
   .state('categories', {
     url: '/categories',
     templateUrl: 'src/templates/categoriesmenu.template.html',
@@ -31,6 +31,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     }
   })
 
+  // Menu items list page
   .state('items', {
     url: '/items/{shortName}',
     template: '<items items=\"itemsCtrl.items\"></items>',
