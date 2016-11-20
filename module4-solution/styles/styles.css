@@ -1,0 +1,14 @@
+body {
+  font-size: 1.2em;
+}
+
+li[ui-sref]:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+  font-weight: bold;
+  border: solid black 2px;
+}
+
+.viewlink {
+  font-size: 1.6em;
+}
