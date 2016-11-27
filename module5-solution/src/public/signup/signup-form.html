@@ -1,0 +1,93 @@
+<div class="container">
+  <h1>Sign Up for Newsletter!</h1>
+  <form name="newsletterForm" novalidate>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="firstNameId">First Name: </label>
+      <div class="col-sm-5">
+        <input class="form-control"
+               type="text"
+               id="firstNameId"
+               name="firstName"
+               placeholder="First Name"
+               ng-model="signupCtrl.user.firstName"
+               required>
+      </div>
+      <span ng-if="newsletterForm.firstName.$error.required && newsletterForm.firstName.$touched">
+        First Name is required!
+      </span>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="lastNameId">Last Name: </label>
+      <div class="col-sm-5">
+        <input class="form-control"
+               type="text"
+               id="lastNameId"
+               name="lastName"
+               placeholder="Last Name"
+               ng-model="signupCtrl.user.lastName"
+               required>
+      </div>
+      <span ng-if="newsletterForm.lastName.$error.required && newsletterForm.lastName.$touched">
+        Last Name is required!
+      </span>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="emailId">Email: </label>
+      <div class="col-sm-5">
+        <input class="form-control"
+               type="text" id="emailId"
+               name="email"
+               placeholder="Email"
+               ng-model="signupCtrl.user.email"
+               required>
+      </div>
+      <span ng-if="newsletterForm.email.$error.required && newsletterForm.email.$touched">
+        Email is required!
+      </span>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="phoneNumberId">Phone Number: </label>
+      <div class="col-sm-5">
+        <input class="form-control"
+               type="text"
+               id="phoneNumberId"
+               name="phoneNumber"
+               placeholder="Phone Number"
+               ng-model="signupCtrl.user.phoneNumber"
+               required>
+      </div>
+      <span ng-if="newsletterForm.phoneNumber.$error.required && newsletterForm.phoneNumber.$touched">
+        Phone Number is required!
+      </span>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="menuNumberId">Menu Number: </label>
+      <div class="col-sm-5">
+        <input class="form-control"
+              type="text"
+              id="menuNumberId"
+              name="menuNumber"
+              placeholder="Menu Number"
+              ng-model="signupCtrl.user.menuNumber"
+              required>
+      </div>
+      <span ng-if="newsletterForm.menuNumber.$error.required && newsletterForm.menuNumber.$touched">
+        Menu Number is required!
+      </span>
+      <span ng-if="signupCtrl.itemDetail.error != null">
+        No such menu number exists
+      </span>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-5">
+        <button type="submit"
+                class="btn btn-primary"
+                ng-disabled="newsletterForm.$invalid"
+                ng-click="signupCtrl.signupUser()">Sign Up</button>
+      </div>
+    </div>
+    <span ng-if="signupCtrl.showInfoSaved">
+      information has been saved
+    </span>
+  </form>
+</div>
