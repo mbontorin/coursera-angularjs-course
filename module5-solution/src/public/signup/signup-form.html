@@ -76,7 +76,7 @@
       <span ng-if="newsletterForm.menuNumber.$error.required && newsletterForm.menuNumber.$touched">
         Menu Number is required!
       </span>
-      <span ng-if="signupCtrl.itemDetail.error != null">
+      <span ng-if="!newsletterForm.menuNumber.$error.required && signupCtrl.itemDetail.error != null">
         No such menu number exists
       </span>
     </div>
