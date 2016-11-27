@@ -18,20 +18,14 @@ function SignupController(UserItemService) {
   signupCtrl.showInfoSaved = false;
 
   signupCtrl.signupUser = function () {
-    console.log("Save User");
     var promise = UserItemService.getItemByNumber(signupCtrl.user.menuNumber);
     promise.then(function (result) {
-      console.log("test promise: ", result);
-      if (result.error) {
-        console.log("error: ",result.error);
-      }
-      else {
+      if (!result.error) {
         UserItemService.saveUser(signupCtrl.user);
         signupCtrl.showInfoSaved = true;
       }
     })
   };
-  console.log("Singup controller: ", signupCtrl);
 }
 
 })();

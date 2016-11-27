@@ -15,12 +15,9 @@ function MyInfoController(UserItemService, ApiPath) {
   if (myInfoCtrl.user.menuNumber) {
     var promise = UserItemService.getItemByNumber(myInfoCtrl.user.menuNumber);
     promise.then(function (result) {
-      console.log("MyInfoController promise: ", result);
       myInfoCtrl.itemDetail = result;
     });
-  };
-
-  console.log("My Info controller: ", myInfoCtrl);
-}
+  }
+};
 
 })();
