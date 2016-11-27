@@ -32,8 +32,6 @@ function SignupController(UserItemService) {
     })
   };
   console.log("Singup controller: ", signupCtrl);
-
-
 }
 
 })();

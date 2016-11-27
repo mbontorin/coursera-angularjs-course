@@ -35,7 +35,8 @@
       <label class="col-sm-2 col-form-label" for="emailId">Email: </label>
       <div class="col-sm-5">
         <input class="form-control"
-               type="text" id="emailId"
+               type="text"
+               id="emailId"
                name="email"
                placeholder="Email"
                ng-model="signupCtrl.user.email"
@@ -69,7 +70,8 @@
               name="menuNumber"
               placeholder="Menu Number"
               ng-model="signupCtrl.user.menuNumber"
-              required>
+              required
+              signup-valid>
       </div>
       <span ng-if="newsletterForm.menuNumber.$error.required && newsletterForm.menuNumber.$touched">
         Menu Number is required!
